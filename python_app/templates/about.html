@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+</head>
+<body>
+    <h3>Here is a variable</h3>
+    <p>{{ test }}</p>
 
-    </head>
-    <body>
-        <p>Hello this is webpage</p>
-    </body>
+    <h3>Here is a dictionary item</h3>
+    <p>{{ betty["Location"] }}</p>
+
+    <h3>Here is a loop</h3>
+    {% for user in users %}
+    <p>{{ user }}</p>
+    {% endfor %}
+
+    <h3>Here is a conditional</h3>
+    {% for user in users %}
+    {% if user == "Betty" %}
+    <p>Hey Betty!</p>
+    {% endif %}
+    {% endfor %}
+</body>
 </html>
