@@ -22,28 +22,32 @@ users = ["Betty", "Max", "Tom"]
 # this is a list of dictionaries called lang_list
 # there are 2 dictionaries items in the list
 lang_list = [
-    {"Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/220px-Python-logo-notext.svg.png",
+    {
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/220px-Python-logo-notext.svg.png",
     "Name": "Python",
     "Age": 30,
-    "Bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod porttitor cursus. Vivamus aliquet leo ligula, quis interdum ante lobortis et. Donec volutpat orci quis ligula mollis, quis tempus augue hendrerit. Nulla augue ligula, fermentum eu nibh ut, porta varius arcu. Proin malesuada pulvinar blandit. Vestibulum elementum egestas nisl. Nulla feugiat nulla ut massa feugiat, sed efficitur mauris viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ornare arcu mattis quam aliquet sollicitudin. Mauris dictum feugiat ante."},
-    {"Image": "https://upload.wikimedia.org/wikipedia/commons/archive/6/6a/20120221235432%21JavaScript-logo.png",
+    "Bio": "Python is an interpreted high-level general-purpose programming language."
+    },
+    {
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/archive/6/6a/20120221235432%21JavaScript-logo.png",
     "Name": "JavaScript",
-    "Age": 40,
-    "Bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod porttitor cursus. Vivamus aliquet leo ligula, quis interdum ante lobortis et. Donec volutpat orci quis ligula mollis, quis tempus augue hendrerit. Nulla augue ligula, fermentum eu nibh ut, porta varius arcu. Proin malesuada pulvinar blandit. Vestibulum elementum egestas nisl. Nulla feugiat nulla ut massa feugiat, sed efficitur mauris viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ornare arcu mattis quam aliquet sollicitudin. Mauris dictum feugiat ante."}
+    "Age": 29,
+    "Bio": "JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification."
+    }
 ]
 
 # here create our first route which is our "default" or homepage
-# this is where we render our index.html template and add our lang_list variable that we want to render
+# this is where we render our index.html template
 @app.route("/")
-def hello():
+def index():
     return render_template("index.html", 
     lang_list=lang_list)
 
-# here is a second webpage with the name "about"
+# here is another webpage with the name "practice"
 # we are bringing 3 variables called test, betty, and users with us
-@app.route("/about")
+@app.route("/practice")
 def about():
-    return render_template("about.html",
+    return render_template("practice.html",
     test=test_var,
     betty=betty_dict,
     users=users)
