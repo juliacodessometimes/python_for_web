@@ -1,5 +1,10 @@
-## import our libraries
-from flask import Flask, render_template, jsonify, request
+# this is an api practice app
+
+# import our libraries
+from flask import Flask, render_template, jsonify
+# for this app we need Flask (to create our app object)
+# render_template (to render templates or html files)
+# and jsonify (to render JSON data for our API)
 
 ## instantiating the app object
 app = Flask(__name__)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Python App</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+  <h1>Login</h1>
+  <!-- here is an if statement in Jinja! -->
+  <!-- it's checking if there is a variable called "message" defined in our app.py file,
+    and displaying it uf there is!-->
+  {% if message %}
+    {{ message }}
+  {% endif %}
+  
+  <!-- here is our html form -->
+  <form method="POST">
+    Email:<br>
+    <!-- this input allows for the user to enter text -->
+    <!-- the name of this input is "user_email" -->
+    <input type="text" name="user_email" >
+    <br>
+    Password:<br>
+    <!-- this input allows for the user to enter text,
+     but since it's a password we cannot see the text -->
+    <!-- the name of this input is "user_password" -->
+    <input type="password" name="user_password" >
+    <br><br>
+    <!-- this input allows for the user to click a Submit button -->
+    <!-- the text displayed on the button is "Login" -->
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
