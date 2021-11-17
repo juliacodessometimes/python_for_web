@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Python App</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <!-- remember, Jinja is a different language! this is a comment in html -->
+        {# and this is a comment in jinja #}
+
+        <!-- using the double curly brackets displays a variable we passed from app.py -->
+        <h3>Here is a variable we defined in our app.py file:</h3>
+        <p>{{ test }}</p>
+        
+        <!-- we can also show items in a list or dictionary using [] indexing -->
+        <h3>The first name in the list "users" is:</h3>
+        <p>{{ users[0] }}</p>
+
+        <h3>Here is a dictionary item we defined in app.py:</h3>
+        <p>Betty lives in: {{ betty["Location"] }}</p>
+        
+        <!-- we can also loop through lists using jinja! -->
+        <h3>Let's use Jinja to loop through each item in the list "users"</h3>
+        {% for i in users %}
+            <p>{{i}}</p>
+        {% endfor %}
+
+        <!-- we can also add an if statement to our loop -->
+        <h3>Here the same loop with a conditional</h3>
+        {% for x in users %}
+        {% if x == "Betty" %}
+            <p>{{x}}</p>
+        {% endif %}
+        {% endfor %}
+
+        <!-- try adding your own variables for practice! -->
+    </body>
+</html>

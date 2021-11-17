@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- here is our first template! it is designed to look like a homepage -->
+<html>
+    <head>
+        <!-- here is where we specify meta-data about this template -->
+        <meta charset="utf-8">
+        <title>My Python App</title>
+        <!-- and here is where we link to our styles.css file, which contains the
+        CSS code that gives our template style -->
+        <link rel="stylesheet" href="../static/styles.css">
+        <!-- remember, .css files go in the "static" folder, while .html files
+        go in the "templates" folder -->
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+        <h1 id="title">Programming Languages</h1>
+        <div id="content">
+            <!-- here is an html table-->
+            <table>
+                <!-- here is the "header" row -->
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Bio</th>
+                </tr>
+                <!-- and here is the first row that contains information -->
+                <tr>
+                    <!-- we can load pictures from other websites if we want -->
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/220px-Python-logo-notext.svg.png"></td>
+                    <td>Python</td>
+                    <td>30</td>
+                    <!-- and for testing purposes, we can also paste some lorem ipsum text to see how 
+                    it looks on the page! -->
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod porttitor cursus. Vivamus aliquet leo ligula, quis interdum ante lobortis et. Donec volutpat orci quis ligula mollis, quis tempus augue hendrerit. Nulla augue ligula, fermentum eu nibh ut, porta varius arcu. Proin malesuada pulvinar blandit. Vestibulum elementum egestas nisl. Nulla feugiat nulla ut massa feugiat, sed efficitur mauris viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ornare arcu mattis quam aliquet sollicitudin. Mauris dictum feugiat ante.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/archive/6/6a/20120221235432%21JavaScript-logo.png"></td>
+                    <td>JavaScript</td>
+                    <td>40</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod porttitor cursus. Vivamus aliquet leo ligula, quis interdum ante lobortis et. Donec volutpat orci quis ligula mollis, quis tempus augue hendrerit. Nulla augue ligula, fermentum eu nibh ut, porta varius arcu. Proin malesuada pulvinar blandit. Vestibulum elementum egestas nisl. Nulla feugiat nulla ut massa feugiat, sed efficitur mauris viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ornare arcu mattis quam aliquet sollicitudin. Mauris dictum feugiat ante.</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
