@@ -3,6 +3,8 @@
 # importing our libaries
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+# remember that sql alchemy is a seperate library from Flask, 
+# so if you haven't installed it already remember you need to install first!
 
 ## instantiating the app object
 app = Flask(__name__)
@@ -13,16 +15,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///people.db'
 # here we instantiate the database object
 db = SQLAlchemy(app)
 
-# class which is our data model
+# creating a new class called Users which is our data model
 class Users(db.Model):
     name = db.Column(db.String, primary_key=True)
     age = db.Column(db.Integer)
     location = db.Column(db.String, nullable=False)
 
-# creates the model
+# this creates the model for our db object
 db.create_all()
 
-# creating objects fromt the class Users that we just created!
+# creating 2 new objects from the class Users that we just created!
+# you can think of each object as a new row in our dataabase
 user_1 = Users(name="Betty", age=30, location="New York")
 user_2 = Users(name="Tom", age=62, location="Miami")
 
