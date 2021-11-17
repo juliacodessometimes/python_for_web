@@ -20,13 +20,17 @@
                     <th>Age</th>
                     <th>Bio</th>
                 </tr>
+                <!-- here we use our Jinja variables that we created in app.py -->
+                <!-- first we have to start the loop -->
                 {% for lang in lang_list %}
                 <tr>
-                    <td><img src={{ lang["Image"] }}></td>
-                    <td>{{ lang["Name"] }}</td>
-                    <td>{{ lang["Age"] }}</td>
-                    <td>{{ lang["Bio"] }}</td>
+                    <!-- then specify our variables - notice how we need to use dot notation -->
+                    <td><img src={{ lang.Image }}></td>
+                    <td>{{ lang.Name }}</td>
+                    <td>{{ lang.Age }}</td>
+                    <td>{{ lang.Bio }}</td>
                 </tr>
+                <!-- and here we end the loop -->
                 {% endfor %}
             </table>
         </div>

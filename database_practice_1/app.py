@@ -22,11 +22,14 @@ class Users(db.Model):
 # creates the model
 db.create_all()
 
+# creating objects fromt the class Users that we just created!
 user_1 = Users(name="Betty", age=30, location="New York")
 user_2 = Users(name="Tom", age=62, location="Miami")
 
-# this adds a row to our database
+# this adds the object user_2 to our database
 db.session.add(user_2)
+# this adds the object user_1 to our database
+db.session.add(user_1)
 
 # this saves our changes to our database
 try:
