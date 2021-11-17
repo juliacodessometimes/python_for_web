@@ -21,6 +21,16 @@ betty_dict = {
     "Age": 30
     }
 
+# a class called "People()"", and an object "person" made from that class:
+class People():
+    # this is the constuctor function
+    def __init__(self, name, location, age):
+        self.name = name
+        self.location = location
+        self.age = age
+
+person = People("Max", "Miami", 36)
+
 # here we are adding our first route to our app object using @app.route()
 @app.route("/")
 def index():
@@ -35,13 +45,14 @@ def index():
 def jinja_practice():
     # this function is rendering the template "jinja_practice.html"...
     # BUT it's also rendering some variables along with it!
-    return render_template("jinja_practice.html", test=test_var, users=user_list, betty=betty_dict)
+    return render_template("jinja_practice.html", test=test_var, users=user_list, betty=betty_dict, person=person)
     # first, it's passing the python variable we created on line 12 "test_var" to the template as the jinja variable "test"
     # then it passes the list we created one line 15 as the jinja variable "users"
-    # finally it passes the dictionary "betty_dict" as the jinja varaible "betty"
+    # then it passes the dictionary "betty_dict" as the jinja variable "betty"
+    # finally it passes the object "person" as the jinja variable "person"
 
-    # now we can show these python objects on our template!
-    # to use them, we have to call them by their jinja names, "test", "users", and "betty" on the template jinja_practice.html
+    # now we can show these python objects on our template "jinja_practice.html"!
+    # to use them, we have to call them by their jinja name: "test"/"users"/"betty"/"person"
 
     # check the code in the jinja_practice.html file to see it in action!
 

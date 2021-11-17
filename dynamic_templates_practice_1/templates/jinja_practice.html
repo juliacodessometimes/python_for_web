@@ -13,13 +13,23 @@
         <h3>Here is a variable we defined in our app.py file:</h3>
         <p>{{ test }}</p>
         
-        <!-- we can also show items in a list or dictionary using [] indexing -->
+        <!-- we can show items in a list or dictionary using [] indexing just as we do in Python -->
         <h3>The first name in the list "users" is:</h3>
         <p>{{ users[0] }}</p>
 
         <h3>Here is a dictionary item we defined in app.py:</h3>
         <p>Betty lives in: {{ betty["Location"] }}</p>
+
+        <h3>Here is another:</h3>
+        <p>Betty is {{ betty["Age"] }} years old</p>
         
+        <!-- we can also show attributes from an object by using dot notation, just like in normal Python -->
+        <h3>The attribute "name", from the object "person" has a value of:</h3>
+        <p>{{ person.name }}</p>
+
+        <h3>The attribute "age", from the object "person" has a value of:</h3>
+        <p>{{ person.age }}</p>
+
         <!-- we can also loop through lists using jinja! -->
         <h3>Let's use Jinja to loop through each item in the list "users"</h3>
         {% for i in users %}

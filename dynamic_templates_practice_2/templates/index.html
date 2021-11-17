@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Python App</title>
+        <!-- remember, our styles.css file goes in the folder called static! -->
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+        <h1 id="title">Programming Languages</h1>
+        <div id="content">
+            <!-- here we create our html table, each row uses <tr> tags -->
+            <table>
+                <!-- the first row of our table just has the headers to our columns -->
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Bio</th>
+                </tr>
+                <!-- starting on the second row of our table, we want Jinja to fill in 
+                all of data we are storing in lang_list in the app.py file -->
+                <!-- first we have to start the loop -->
+                {% for i in lang_list %}
+                <tr>
+                    <!-- then we specify our variables - notice how we need to use [] because 
+                    lang_list is a list of dictionaries -->
+                    <td><img src={{ i["Image"] }}></td>
+                    <td>{{ i["Name"] }}</td>
+                    <td>{{ i["Age"] }}</td>
+                    <td>{{ i["Bio"] }}</td>
+                </tr>
+                <!-- the above loops through the list of dictionaries lang_list, 
+                    and for each item (or dictionary), creates a new <tr> row.
+                    
+                    Jinja creates a box in that row using <td> and
+                    fills it in with the value of the dictionary key for that item
+                    (so line 34 displays the value for "Name" for that dictionary, etc.)-->
+
+                <!-- and here we end the loop -->
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
