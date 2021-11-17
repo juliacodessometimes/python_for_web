@@ -23,8 +23,8 @@ lang_list = [
     }
 ]
 
-
-# this is the URL where we render our index.html template
+# here is our main route
+# it's where we render our index.html template or homepage
 @app.route("/")
 def index():
     return render_template("index.html", 
