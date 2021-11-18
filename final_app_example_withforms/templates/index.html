@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Python App</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <!-- here is our navigation bar -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/api/all">API</a></li>
+        </ul>
+        <h1 id="title">Programming Languages</h1>
+        <div id="content">
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                </tr>
+                <!-- Our Jinja loop starts here -->
+                {% for pet in all_pets %}
+                <tr>
+                    <td><img src={{ pet.Image }}></td>
+                    <!-- Here is where we link to our detail pages -->
+                    <td><a href="/details/{{ pet.pet_id }}">{{ pet.Name }}</a></td>
+                    <td>{{ pet.Breed }}</td>
+                    <td>{{ pet.Age }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

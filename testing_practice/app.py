@@ -46,8 +46,8 @@ def details(slug):
     # python takes the variable slug in the URL, and asks the database for the object (aka row) with that as a primary key
     lang_item = Languages.query.get(slug)
 
-    # here we add an if statement that checks if the integer of the slug is less than 2
-    if int(slug) > 2:
+    # here we add an if statement that checks if the integer of the slug is greater than the number of items in our list
+    if int(slug) > len(Languages.query.all()):
         # and if it is, adds a message
         abort(404, description="No language with that id was found")
 

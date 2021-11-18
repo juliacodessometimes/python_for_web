@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Details Page</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <!-- here is our navigation bar -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/api/all">API</a></li>
+        </ul>
+        <h1>Pet Details</h1>
+        <div>
+            <h3>{{ pet_item.Name }}</h3>
+            <img src={{ pet_item.Image }}>
+            <p>{{ pet_item.Breed }}</p>
+            <p>{{ pet_item.Age }} </p>
+        </div>
+        <div>
+            <h3>Edit Pet Info</h3>
+            <!-- here is the form that users will use to edit the database -->
+            <form method="POST">
+                Edit Breed:<br>
+                <input type="text" name="breed">
+                <br>
+                Edit Age:<br>
+                <input type="text" name="age">
+                <br>
+                <input type="submit" value="Submit Info">
+            </form>
+        </div>
+    </body>
+</html>
