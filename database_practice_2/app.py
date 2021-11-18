@@ -57,38 +57,51 @@ finally:
 
 ## Querying the database
 
-# this is a list of all objects of the class Languages
+# .query.all() gets us a list of all objects of the class "Languages"
 lang_all = Languages.query.all()
+# we can use print() to see the list in the terminal
 print(lang_all)
 
-# we can get the first object in the list
+# we can get the first object in the list using []
 # and get the attribute Bio using dot notation
 print(lang_all[0].Bio)
 
-# return a row using the primary key
-lang = Languages.query.get("2")
-print(lang.Bio)
+# here we are getting the attribute "Name" from first object in the list
+print("The name of the first object in the list is:", lang_all[0].Name)
 
-# making changes to the database
-# here we are getting the object with the primary key "2"
-# and saving it as a variable called javascript1
+# .query.get() returns the row that matches the primary key in the ()
+# in line 75 below, we get the object of the class Languages that has a primary key "1" and save it as a variable called "lang"
+lang = Languages.query.get("1")
+# we can use dot notation on the variable to get atrributes of the object
+print(lang.lang_id)
+print("The name of the object with the primary key '1' is:", lang.Name)
+
+
+# Making changes to the database
+
+# here we are getting the object with the primary key "2" and saving it as a variable called "javascript1"
 javascript1 = Languages.query.get("2")
-# here we use dot notation to get the attribute Name from the object
-# and set it equal to "JavaScript"
-javascript1.Name = "JavaScript"
-# and printing it in the terminal
+# here we are printing the attribute Name from that object
+print(javascript1.Name)
+
+# to change this attribute, we can use dot notation to get the attribute Name from the object and set it equal to "test"
+javascript1.Name = "test"
+# printing it in the terminal will show the change
 print(javascript1.Name)
 
 # and here we save our changes to the database again
-try:
-    db.session.commit()
-except Exception as e:
-    db.session.rollback()
-finally:
-    db.session.close()
+db.session.commit()
+
+# let's change it back so it makes sense on our site!
+javascript1.Name = "JavaScript"
+print(javascript1.Name)
+
+# remember we need to save our changes:
+db.session.commit()
+
+# try changing the some attributes and refreshing your site!
 
 # here create our first route which is our "default" or homepage
-# this is where we render our index.html template
 @app.route("/")
 def index():
     lang_data = Languages.query.all()
