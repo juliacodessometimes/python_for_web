@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Details Page</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <h1>Language Details</h1>
+        <div>
+            <!-- here we use our Jinja variables that we created in app.py -->
+            <!-- notice how each variable needs to use dot notation -->
+            <!-- this is because we are dealing with objects, not dictionaries! -->
+            <h3>{{ lang_item.Name }}</h3>
+            <img src= {{ lang_item.Image }}>
+            <p>{{ lang_item.Age }}</p>
+            <p>{{ lang_item.Bio }}</p>
+        </div>
+        <div>
+            <h3>Edit Language Info</h3>
+            <!-- here is the form that users will use to edit the database -->
+            <form method="POST">
+                Edit Age:<br>
+                <input type="text" name="age">
+                <br>
+                Edit Bio:<br>
+                <input type="text" name="bio">
+                <br>
+                <input type="submit" value="Submit Info">
+            </form>
+        </div>
+    </body>
+</html>

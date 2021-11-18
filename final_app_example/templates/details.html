@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Details Page</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>API</li>
+        </ul>
+        <h1>Language Details</h1>
+        <div>
+            <!-- here we use our Jinja variables that we created in app.py -->
+            <h3>{{ lang_item.Name }}</h3>
+            <img src= {{ lang_item.Image }}>
+            <p>{{ lang_item.Age }}</p>
+            <p>{{ lang_item.Bio }}</p>
+        </div>
+    </body>
+</html>

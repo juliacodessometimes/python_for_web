@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Python App</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+        <h1 id="title">Programming Languages</h1>
+        <div id="content">
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Bio</th>
+                </tr>
+                <!-- here we use our Jinja variables that we created in app.py -->
+                <!-- first we have to start the loop -->
+                {% for lang in lang_list %}
+                <tr>
+                    <!-- then specify our variables - notice how we need to use dot notation -->
+                    <td><img src={{ lang.Image }}></td>
+                    <td>{{ lang.Name }}</td>
+                    <td>{{ lang.Age }}</td>
+                    <td>{{ lang.Bio }}</td>
+                </tr>
+                <!-- and here we end the loop -->
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
