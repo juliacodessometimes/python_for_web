@@ -57,7 +57,8 @@ finally:
 
 ## Querying the database
 
-# .query.all() gets us a list of all objects of the class "Languages"
+# .query.all() gets us a list of all objects (or "rows") of the class "Languages"
+# you can think of it as grabbing all rows in our database
 lang_all = Languages.query.all()
 # we can use print() to see the list in the terminal
 print(lang_all)
@@ -104,7 +105,9 @@ db.session.commit()
 # here create our first route which is our "default" or homepage
 @app.route("/")
 def index():
+    # here we are creating a variable called lang_data that contains all objects (aka rows) of the class Languages
     lang_data = Languages.query.all()
+    # then we pass that variable to the template and call it lang_list
     return render_template("index.html", lang_list=lang_data)
 
 # in this route, <lang_id> is a variable that gets passed to the function below
