@@ -1,4 +1,4 @@
-# python_for_web
+# Python for Web Development
 
 This is a repository for students in Python for Web Development!
 
