@@ -53,6 +53,7 @@ pet_4 = Pets(
     Breed = "Cat",
     Age = 9,
 )
+
 # our database has 4 objects in it, or 4 rows
 # adding each row to the session
 db.session.add(pet_1)
