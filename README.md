@@ -21,7 +21,7 @@ While Example 2 is more of a finished website, Example 1 is all  you need to rec
 
 
 
-Below is a rough outline of when the code in each folder was covered:
+Below is a rough outline of when the code in each folder was covered with links to each folder:
 
 
 **Session 2 (9/30)**
