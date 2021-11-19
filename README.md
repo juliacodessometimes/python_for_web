@@ -20,7 +20,9 @@ It follows assignments 1-6, and also follows the testing/cleanup walkthrough and
 While Example 2 is more of a finished website, Example 1 is all  you need to receive full credit for your final!
 
 
+
 Below is a rough outline of when the code in each folder was covered:
+
 
 **Session 2 (9/30)**
 *The Frontend: HTML and CSS*
@@ -35,18 +37,23 @@ Below is a rough outline of when the code in each folder was covered:
 [basic_flask](https://github.com/juliacodessometimes/python_for_web/tree/main/basic_flask)
 
 
+
 **Session 5 (10/21)**
 *Dynamic Templates and Jinja*
 
 [dynamic_templates_practice_1](https://github.com/juliacodessometimes/python_for_web/tree/main/dynamic_templates_practice_1)
+
 [dynamic_templates_practice_2](https://github.com/juliacodessometimes/python_for_web/tree/main/dynamic_templates_practice_2)
+
 
 
 **Session 6 (10/28)**
 *APIs, JSON, Requests, and Forms*
 
 [api_practice](https://github.com/juliacodessometimes/python_for_web/tree/main/api_practice)
+
 [forms_practice_1](https://github.com/juliacodessometimes/python_for_web/tree/main/forms_practice_1)
+
 
 
 **Session 7 (11/4)**
@@ -55,16 +62,19 @@ Below is a rough outline of when the code in each folder was covered:
 [database_practice_1](https://github.com/juliacodessometimes/python_for_web/tree/main/database_practice_1)
 
 
+
 **Session 8 (11/11)**
 *More with Databases and Queries*
 
 [database_practice_2](https://github.com/juliacodessometimes/python_for_web/tree/main/database_practice_2)
 
 
+
 **Session 9 (11/18)**
 *More with Forms, Testing, and Cleanup*
 
 [forms_practice_2](https://github.com/juliacodessometimes/python_for_web/tree/main/forms_practice_2)
+
 [testing_practice](https://github.com/juliacodessometimes/python_for_web/tree/main/testing_practice)
 
 
